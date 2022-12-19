@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+body {
+  font-family: monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 250px;
+  height: 375px;
+  margin: 10%;
+  background-color: #6495ed63;
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-area {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.word-input {
+  height: 25px;
+  width: 80%;
+  align-self: center;
+  margin-top: 50px;
+  border-radius: 5px;
+  text-indent: 10px;
+  font-family: monospace;
+}
+
+.word-search {
+  height: 25px;
+  width: 80%;
+  align-self: center;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-indent: 10px;
+  font-family: monospace;
+}
+
+.dropdown-list {
+  width: 81%;
+  align-self: center;
+  margin-top: -4px;
+  padding: 0px;
+  border-radius: 0px 0px 5px 5px;
+  background-color: white;
+  font-family: monospace;
+}
+
+.dropdown-list-empty {
+  width: 81%;
+  align-self: center;
+  margin-top: -4px;
+  padding: 0px;
+  border-radius: 0px 0px 5px 5px;
+  background-color: white;
+  font-family: monospace;
+  color: red;
+  text-indent: 11px;
+  font-style: italic;
+}
+
+li {
+  list-style: none;
+  text-indent: 11px;
 }
