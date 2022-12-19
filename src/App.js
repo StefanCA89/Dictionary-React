@@ -17,6 +17,7 @@ function App() {
   }
 
   function handleKeyDown(event) {
+    alert(event.key)
     if (event.key === "Enter" || event.keyCode === "9") {
     updateArray()
     }
