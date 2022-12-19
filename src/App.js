@@ -1,6 +1,8 @@
 import './App.css';
 import React from 'react';
 import Dropdown from './Components/Dropdown'
+import WordInput from './Components/WordInput'
+import WordSearch from './Components/WordSearch'
 
 function App() {
 
@@ -39,8 +41,8 @@ function App() {
     <div className="app-container">
       <div className='app-title'>Dictionary</div>
       <div className='word-counter'>Word count {wordsArray.length}</div>
-      <input className='word-input' name='input' placeholder='Input word here' onKeyDown={handleKeyDown} onChange={updateInput} value={word}/>
-      <input className='word-search' name='search' placeholder='Search for word' onChange={updateInput} value={searchChar} />
+      <WordInput onChange={updateInput} onKeyDown={handleKeyDown} value={word}/>
+      <WordSearch onChange={updateInput} value={searchChar} />
       {searchChar.length !== 0 && <Dropdown array={matchArray}/>}
     </div>
   )
