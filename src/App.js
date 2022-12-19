@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Dropdown from './Components/Dropdown'
 
 function App() {
@@ -37,9 +37,11 @@ function App() {
 
   return (
     <div className="app-container">
-        <input className='word-input' name='input' placeholder='Input word here' onKeyDown={handleKeyDown} onChange={updateInput} value={word}/>
-        <input className='word-search' name='search' placeholder='Search for word' onChange={updateInput} value={searchChar} />
-        {searchChar.length !== 0 && <Dropdown array={matchArray}/>}
+      <div className='app-title'>Dictionary</div>
+      <div className='word-counter'>Word count {wordsArray.length}</div>
+      <input className='word-input' name='input' placeholder='Input word here' onKeyDown={handleKeyDown} onChange={updateInput} value={word}/>
+      <input className='word-search' name='search' placeholder='Search for word' onChange={updateInput} value={searchChar} />
+      {searchChar.length !== 0 && <Dropdown array={matchArray}/>}
     </div>
   )
 }
