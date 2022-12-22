@@ -1,9 +1,4 @@
 export default function WordInput(props) {
-
-    function updateInput(event) {
-        props.setWord(event.target.value)
-    }
-
     return(
         <input 
             className='word-input'
@@ -11,7 +6,7 @@ export default function WordInput(props) {
             placeholder='Input word here'
             enterKeyHint='done'
             onKeyDown={props.onKeyDown} 
-            onChange={updateInput} 
+            onChange={event => props.setWord(event.target.value)} 
             value={props.value}
         />
     )
