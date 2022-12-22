@@ -9,8 +9,7 @@ function App() {
   const [word, setWord] = React.useState("")
   const [wordsArray, setWordsArray] = React.useState([])
   const [searchChar, setSearchChar] = React.useState("")
-  const [matchArray, setMatchArray] = React.useState([])
-  
+
   function handleKeyDown(event) {
     if (event.key === "Enter") {
     updateArray()
@@ -37,12 +36,9 @@ function App() {
       />
       <WordSearch 
         value={searchChar} 
-        searchChar={searchChar} 
         setSearchChar={setSearchChar}
-        setMatchArray={setMatchArray}
-        wordsArray={wordsArray}
       />
-      {searchChar.length !== 0 && <Dropdown array={matchArray}/>}
+      {searchChar.length !== 0 && <Dropdown wordsArray={wordsArray} searchChar={searchChar}/>}
     </div>
   )
 }

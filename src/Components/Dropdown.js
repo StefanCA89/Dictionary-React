@@ -1,6 +1,8 @@
 export default function Dropdown(props) {
-    const listItems = props.array.map(arrayItem => <li key={arrayItem}>{arrayItem}</li>)
+    const {wordsArray, searchChar} = props
+    const matchArray = wordsArray.filter(wordItem => wordItem.includes(searchChar))
+    const listItems = matchArray.map(arrayItem => <li key={arrayItem}>{arrayItem}</li>)
     return (
-        props.array.length > 0 ? <ul className="dropdown-list">{listItems}</ul> : <ul className="dropdown-list-empty">No mathes found</ul>
+        matchArray.length > 0 ? <ul className="dropdown-list">{listItems}</ul> : <ul className="dropdown-list-empty">No mathes found</ul>
     )
-}
+} 
